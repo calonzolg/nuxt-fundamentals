@@ -1,0 +1,38 @@
+<template>
+  <div class="container">
+    <article>
+      <h1 class="title">What is Balut?</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quaerat
+        esse magnam laborum natus exercitationem quod iusto minus voluptatum
+        aut? Dolores, sapiente ea. Repellendus voluptates aperiam odio
+        blanditiis maxime eum.
+      </p>
+    </article>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Post',
+}
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+article * {
+  margin-bottom: 1rem;
+}
+aside {
+  min-width: 280px;
+  max-width: 280px;
+  padding-left: 2rem;
+}
+.title {
+  font-size: 2rem;
+}
+</style>
