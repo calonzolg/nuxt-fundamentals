@@ -21,12 +21,38 @@
           GitHub
         </a>
       </div>
+
+      <div class="links">
+        <nuxt-link
+          v-for="post in posts"
+          :key="post.id"
+          :to="{ name: 'posts-id', params: { id: post.id } }"
+          class="button--grey"
+        >
+          {{ post.title }}
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'Home',
+      meta: [
+        { name: 'twitter:title', content: 'Home' },
+        { name: 'twitter:description', content: 'Nuxt Fundamentals' },
+      ],
+    }
+  },
+  computed: {
+    posts() {
+      return this.$store.state.posts.all
+    },
+  },
+}
 </script>
 
 <style>
